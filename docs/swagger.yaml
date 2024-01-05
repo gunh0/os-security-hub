@@ -1,0 +1,38 @@
+basePath: /api
+definitions:
+  handlers.HealthResponse:
+    properties:
+      status:
+        type: string
+      timestamp:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: your-email@example.com
+    name: API Support
+  description: Security compliance scanning and monitoring system for multiple operating
+    systems
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: OS Security Hub API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      consumes:
+      - '*/*'
+      description: get the status of server.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.HealthResponse'
+      summary: Show the status of server.
+      tags:
+      - health
+swagger: "2.0"
