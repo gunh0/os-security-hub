@@ -1,5 +1,47 @@
 basePath: /api
 definitions:
+  handlers.AuditRequest:
+    properties:
+      category:
+        enum:
+        - account
+        - filesystem
+        - network
+        - hypervisor
+        - patch_and_log
+        type: string
+      host:
+        type: string
+      password:
+        type: string
+      script:
+        type: string
+      username:
+        type: string
+    required:
+    - category
+    - host
+    - password
+    - script
+    - username
+    type: object
+  handlers.AuditResult:
+    properties:
+      check_name:
+        type: string
+      details:
+        type: string
+      result:
+        type: string
+      timestamp:
+        type: string
+    type: object
+  handlers.ErrorResponse:
+    properties:
+      error:
+        example: error message
+        type: string
+    type: object
   handlers.HealthResponse:
     properties:
       status:
@@ -20,6 +62,36 @@ info:
   title: OS Security Hub API
   version: "1.0"
 paths:
+  /audit/run:
+    post:
+      consumes:
+      - application/json
+      description: Execute security audit script on remote server
+      parameters:
+      - description: Audit execution request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/handlers.AuditRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.AuditResult'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Run audit script on remote server
+      tags:
+      - audit
   /health:
     get:
       consumes:

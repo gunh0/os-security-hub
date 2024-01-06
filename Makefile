@@ -29,3 +29,16 @@ swag:
 tidy:
 	@echo "Tidying up dependencies..."
 	@go mod tidy
+
+# Run audit script
+# Usage: make test-audit SCRIPT=default_account_management CATEGORY=account
+HOST=172.16.0.205
+USERNAME=root
+PASSWORD=1q2w3e4r!!Q
+test-audit:
+	@echo "Running audit script: $(SCRIPT)"
+	@curl -X 'POST' \
+		'http://localhost:8080/api/audit/run' \
+		-H 'accept: application/json' \
+		-H 'Content-Type: application/json' \
+		-d '{"category":"$(CATEGORY)","host":"$(HOST)","password":"$(PASSWORD)","script":"$(SCRIPT)","username":"$(USERNAME)"}' | json_pp

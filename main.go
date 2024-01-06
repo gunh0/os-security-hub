@@ -38,10 +38,11 @@ func setupRouter() *gin.Engine {
 	// Swagger
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	v1 := r.Group("/api/")
+	// API routes
+	api := r.Group("/api")
 	{
-		// Health Check
-		v1.GET("/health", handlers.HealthCheck)
+		api.GET("/health", handlers.HealthCheck)
+		api.POST("/audit/run", handlers.RunAudit)
 	}
 
 	return r
