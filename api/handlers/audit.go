@@ -19,7 +19,7 @@ type AuditRequest struct {
 }
 
 type AuditResult struct {
-	CheckName string    `json:"check_name"`
+	Title     string    `json:"title"`
 	Result    string    `json:"result"`
 	Details   string    `json:"details"`
 	Timestamp time.Time `json:"timestamp"`

@@ -31,7 +31,9 @@ tidy:
 	@go mod tidy
 
 # Run audit script
-# Usage: make test-audit SCRIPT=default_account_management CATEGORY=account
+# Usage)
+# make test-audit SCRIPT=dangerous_or_unnecessary_account_detection CATEGORY=account
+# make test-audit SCRIPT=root_privilege_account_detection CATEGORY=account
 HOST=172.16.0.205
 USERNAME=root
 PASSWORD=1q2w3e4r!!Q

@@ -130,9 +130,6 @@ const docTemplate = `{
         "handlers.AuditResult": {
             "type": "object",
             "properties": {
-                "check_name": {
-                    "type": "string"
-                },
                 "details": {
                     "type": "string"
                 },
@@ -140,6 +137,9 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "timestamp": {
+                    "type": "string"
+                },
+                "title": {
                     "type": "string"
                 }
             }

@@ -1,11 +1,6 @@
 #!/bin/bash
-
-# Configuration Assessment: Default Account Management
 # Description: Check for unnecessary default accounts and their status
-# Security Impact: Default accounts with default passwords can be exploited for unauthorized access
-# Reference: Security Best Practices for XenServer Account Management
-
-CHECK_NAME="Default Account Management"
+TITLE="Dangerous or Unnecessary Account Detection"
 RESULT="PASS"
 DETAILS=""
 RISKY_ACCOUNTS=("lp" "uucp" "nuucp" "guest" "test" "xguest" "nobody" "messagebus")
@@ -68,7 +63,7 @@ fi
 # Output in JSON format
 cat <<EOF
 {
-   "check_name": "$CHECK_NAME",
+   "title": "$TITLE",
    "result": "$RESULT",
    "details": "$DETAILS",
    "timestamp": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"

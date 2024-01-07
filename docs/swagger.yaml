@@ -27,13 +27,13 @@ definitions:
     type: object
   handlers.AuditResult:
     properties:
-      check_name:
-        type: string
       details:
         type: string
       result:
         type: string
       timestamp:
+        type: string
+      title:
         type: string
     type: object
   handlers.ErrorResponse:
