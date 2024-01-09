@@ -35,6 +35,7 @@ tidy:
 # make test-audit SCRIPT=dangerous_or_unnecessary_account_detection CATEGORY=account
 # make test-audit SCRIPT=root_privilege_account_detection CATEGORY=account
 # make test-audit SCRIPT=password_policy_check CATEGORY=account
+# make test-audit SCRIPT=system_account_shell_restriction_check CATEGORY=account
 HOST=172.16.0.205
 USERNAME=root
 PASSWORD=1q2w3e4r!!Q
