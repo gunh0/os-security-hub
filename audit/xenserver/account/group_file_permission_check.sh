@@ -25,9 +25,9 @@ fi
 
 cat <<EOF
 {
-  "title": "$TITLE",
-  "result": "$RESULT",
-  "details": "$DETAILS",
-  "timestamp": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+    "title": "$TITLE",
+    "result": "$RESULT",
+    "details": "$DETAILS",
+    "timestamp": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 }
 EOF

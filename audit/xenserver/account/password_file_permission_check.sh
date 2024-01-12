@@ -45,9 +45,9 @@ fi
 echo "[*] Generating final report..." >&2
 cat <<EOF
 {
-  "title": "$TITLE",
-  "result": "$RESULT",
-  "details": "$DETAILS",
-  "timestamp": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+    "title": "$TITLE",
+    "result": "$RESULT",
+    "details": "$DETAILS",
+    "timestamp": "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 }
 EOF
