@@ -7,3 +7,4 @@
 - [x] (Account) Password Policy Check
 - [x] (Account) System Account Shell Restriction Check
 - [x] (Account) SU Command Restriction Check
+- [x] (File System) UMASK Default Configuration Check
