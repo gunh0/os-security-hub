@@ -67,3 +67,6 @@ test-audit-07:
 
 test-audit-08:
 	@make test-audit SCRIPT=umask_default_configuration_check CATEGORY=file_system
+
+test-audit-09:
+	@make test-audit SCRIPT=xsconsole_file_permission_check CATEGORY=file_system

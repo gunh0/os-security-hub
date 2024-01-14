@@ -107,9 +107,9 @@ const docTemplate = `{
                     "type": "string",
                     "enum": [
                         "account",
-                        "filesystem",
-                        "network",
-                        "hypervisor",
+                        "file_system",
+                        "network_and_app",
+                        "hypervisor_policy",
                         "patch_and_log"
                     ]
                 },
