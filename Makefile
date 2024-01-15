@@ -70,3 +70,6 @@ test-audit-08:
 
 test-audit-09:
 	@make test-audit SCRIPT=xsconsole_file_permission_check CATEGORY=file_system
+
+test-audit-10:
+	@make test-audit SCRIPT=profile_file_permission_check CATEGORY=file_system
