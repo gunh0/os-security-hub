@@ -1,5 +1,7 @@
 ### XenServer
 
+> Tested on XenServer release 8.4.0 (xenenterprise)
+
 - [x] (Account) Default Account Check
 - [x] (Account) Root Privilege Account Detection
 - [x] (Account) Password File Permission Check
@@ -10,3 +12,4 @@
 - [x] (File System) UMASK Default Configuration Check
 - [x] (File System) XSConsole File Permission Check
 - [x] (File System) Profile File Permission Check
+- [x] (File System) Hosts File Permission Check

@@ -73,3 +73,6 @@ test-audit-09:
 
 test-audit-10:
 	@make test-audit SCRIPT=profile_file_permission_check CATEGORY=file_system
+
+test-audit-11:
+	@make test-audit SCRIPT=hosts_file_permission.check CATEGORY=file_system
