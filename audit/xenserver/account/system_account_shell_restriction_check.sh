@@ -4,7 +4,9 @@ TITLE="System Account Shell Restriction Check"
 RESULT="PASS"
 DETAILS=""
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Starting system account shell restriction check..." >&2
+echo $(printf '%.0s-' {1..100})
 
 # Define system accounts that should have restricted shells
 echo "[*] Defining system accounts that should have restricted shells..." >&2

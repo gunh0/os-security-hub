@@ -4,7 +4,9 @@ TITLE="Root Privilege Account Detection"
 RESULT="PASS"
 DETAILS=""
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Starting root privilege account detection..." >&2
+echo $(printf '%.0s-' {1..100})
 
 # System accounts that are allowed to have UID 0
 echo "[*] Defining allowed system accounts..." >&2

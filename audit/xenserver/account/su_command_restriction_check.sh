@@ -4,7 +4,9 @@ TITLE="SU Command Restriction Check"
 RESULT="PASS"
 DETAILS=""
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Starting SU command restriction check..." >&2
+echo $(printf '%.0s-' {1..100})
 
 # Check if /etc/pam.d/su file exists
 echo "[*] Checking /etc/pam.d/su file..." >&2

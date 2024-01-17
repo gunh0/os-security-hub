@@ -9,7 +9,10 @@ echo "[*] Starting XSConsole file permission check..." >&2
 # Define target file
 XSCONSOLE_FILE="/usr/bin/xsconsole"
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Checking if $XSCONSOLE_FILE exists..." >&2
+echo $(printf '%.0s-' {1..100})
+
 if [ ! -f "$XSCONSOLE_FILE" ]; then
     RESULT="FAIL"
     DETAILS="$XSCONSOLE_FILE file does not exist"

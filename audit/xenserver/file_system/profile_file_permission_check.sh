@@ -4,7 +4,9 @@ TITLE="Profile File Permission Check"
 RESULT="PASS"
 DETAILS=""
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Starting profile file permission check..." >&2
+echo $(printf '%.0s-' {1..100})
 
 # Define target file
 PROFILE_FILE="/etc/profile"

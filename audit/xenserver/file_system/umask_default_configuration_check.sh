@@ -4,7 +4,9 @@ TITLE="UMASK Default Configuration Check"
 RESULT="PASS"
 DETAILS=""
 
+echo $(printf '%.0s-' {1..100})
 echo "[*] Starting UMASK configuration check..." >&2
+echo $(printf '%.0s-' {1..100})
 
 # Define valid UMASK values
 echo "[*] Defining valid UMASK values..." >&2

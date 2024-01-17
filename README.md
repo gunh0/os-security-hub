@@ -13,3 +13,4 @@
 - [x] (File System) XSConsole File Permission Check
 - [x] (File System) Profile File Permission Check
 - [x] (File System) Hosts File Permission Check
+- [x] (File System) Issue File Permission Check
