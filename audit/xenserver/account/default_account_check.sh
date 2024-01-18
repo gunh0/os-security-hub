@@ -4,9 +4,9 @@ TITLE="Default Account Check"
 RESULT="PASS"
 DETAILS=""
 
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 echo "[*] Starting default account check..." >&2
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 
 # Define unnecessary default accounts
 echo "[*] Defining unnecessary default accounts..." >&2

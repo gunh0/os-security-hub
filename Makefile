@@ -44,35 +44,38 @@ test-audit:
 		-d '{"category":"$(CATEGORY)","host":"$(HOST)","password":"$(PASSWORD)","script":"$(SCRIPT)","username":"$(USERNAME)"}' | json_pp
 
 # Usage)
-test-audit-01:
+test-audit-account-01:
 	@make test-audit SCRIPT=default_account_check CATEGORY=account
 
-test-audit-02:
+test-audit-account-02:
 	@make test-audit SCRIPT=root_privilege_account_detection CATEGORY=account
 
-test-audit-03:
+test-audit-account-03:
 	@make test-audit SCRIPT=password_file_permission_check CATEGORY=account
 
-test-audit-04:
+test-audit-account-04:
 	@make test-audit SCRIPT=group_file_permission_check CATEGORY=account
 
-test-audit-05:
+test-audit-account-05:
 	@make test-audit SCRIPT=password_policy_check CATEGORY=account
 
-test-audit-06:
+test-audit-account-06:
 	@make test-audit SCRIPT=system_account_shell_restriction_check CATEGORY=account
 
-test-audit-07:
+test-audit-account-07:
 	@make test-audit SCRIPT=su_command_restriction_check CATEGORY=account
 
-test-audit-08:
+test-audit-file-01:
 	@make test-audit SCRIPT=umask_default_configuration_check CATEGORY=file_system
 
-test-audit-09:
+test-audit-file-02:
 	@make test-audit SCRIPT=xsconsole_file_permission_check CATEGORY=file_system
 
-test-audit-10:
+test-audit-file-03:
 	@make test-audit SCRIPT=profile_file_permission_check CATEGORY=file_system
 
-test-audit-11:
-	@make test-audit SCRIPT=hosts_file_permission.check CATEGORY=file_system
+test-audit-file-04:
+	@make test-audit SCRIPT=hosts_file_permission_check CATEGORY=file_system
+
+test-audit-network-01:
+	@make test-audit SCRIPT=session_timeout_configuration_check CATEGORY=network_and_app

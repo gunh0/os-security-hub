@@ -4,9 +4,9 @@ TITLE="Group File Permission Check"
 RESULT="PASS"
 DETAILS=""
 
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 echo "[*] Starting group file permission check..." >&2
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 
 # Define target file
 GROUP_FILE="/etc/group"

@@ -4,9 +4,9 @@ TITLE="Password Policy Configuration Check"
 RESULT="PASS"
 DETAILS=""
 
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 echo "[*] Starting password policy check..." >&2
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 
 # Get current password policy settings
 echo "[*] Reading password settings from /etc/login.defs..." >&2

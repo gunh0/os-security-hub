@@ -4,10 +4,9 @@ TITLE="Password File Permission Check"
 RESULT="PASS"
 DETAILS=""
 
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 echo "[*] Starting password file permission check..." >&2
-echo $(printf '%.0s-' {1..100})
-
+echo $(printf '%.0s-' {1..100}) >&2
 # Check /etc/passwd file
 PASSWD_FILE="/etc/passwd"
 
