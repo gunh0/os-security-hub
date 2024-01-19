@@ -15,7 +15,7 @@ type AuditRequest struct {
 	Host     string `json:"host" binding:"required"`
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required"`
-	Category string `json:"category" binding:"required,oneof=account file_system network_and_app hypervisor_policy patch_and_log"`
+	Category string `json:"category" binding:"required,oneof=account file_system network_and_app logging"`
 	Script   string `json:"script" binding:"required"`
 }
 
