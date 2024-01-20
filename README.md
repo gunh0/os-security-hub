@@ -16,3 +16,4 @@
 - [x] (File System) Issue File Permission Check
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Logging) Authpriv Log Configuration Check
+- [x] (Logging) UDP Syslog Transfer Port (514) Security Check

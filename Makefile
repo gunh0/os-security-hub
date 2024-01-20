@@ -79,3 +79,9 @@ test-audit-file-04:
 
 test-audit-network-01:
 	@make test-audit SCRIPT=session_timeout_configuration_check CATEGORY=network_and_app
+
+test-audit-logging-01:
+	@make test-audit SCRIPT=authpriv_log_configuration_check CATEGORY=logging
+
+test-audit-logging-02:
+	@make test-audit SCRIPT=udp_syslog_transfer_port_security_check CATEGORY=logging

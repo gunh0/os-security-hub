@@ -4,9 +4,9 @@ TITLE="Authpriv Log Configuration Check"
 RESULT="PASS"
 DETAILS=""
 
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 echo "[*] Starting authpriv log configuration check..." >&2
-echo $(printf '%.0s-' {1..100})
+echo $(printf '%.0s-' {1..100}) >&2
 
 # Define files to check
 LOG_FILE="/var/log/secure"
