@@ -85,3 +85,6 @@ test-audit-logging-01:
 
 test-audit-logging-02:
 	@make test-audit SCRIPT=udp_syslog_transfer_port_security_check CATEGORY=logging
+
+test-audit-logging-03:
+	@make test-audit SCRIPT=audit_log_file_permission_check CATEGORY=logging
