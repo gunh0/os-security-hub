@@ -3,14 +3,15 @@ definitions:
   handlers.AuditRequest:
     properties:
       category:
-        enum:
-        - account
-        - file_system
-        - network_and_app
-        - hypervisor_policy
-        - patch_and_log
+        description: 카테고리 검증 제거
         type: string
       host:
+        type: string
+      os:
+        description: OS 타입 추가
+        enum:
+        - ubuntu
+        - xenserver
         type: string
       password:
         type: string
@@ -21,6 +22,7 @@ definitions:
     required:
     - category
     - host
+    - os
     - password
     - script
     - username

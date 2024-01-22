@@ -1,6 +1,20 @@
+### Ubuntu
+
+> Tested on 22.04 LTS (Jammy Jellyfish)
+
+| Version | Released | End of Standard Support | End of Ubuntu Pro Support | End of Legacy Support |
+|---|---|---|---|---|
+| 22.04 LTS (Jammy Jellyfish) | Apr 2022 | Apr 2027 | Apr 2032 | Apr 2034 |
+
+- [x] (Initial Setup) 1.1.1.1 Ensure cramfs kernel module is not available (Automated)
+
 ### XenServer
 
 > Tested on XenServer release 8.4.0 (xenenterprise)
+
+| Product | Version | Language | NSC | EOS | EOM & EOL | Notes |
+|---|:---:|:---:|:---:|:---:|:---:|---|
+| XenServer | 8 | EN | 03-26-2024 | 06-03-2024 | 11-30-2028 | XenServer specific licence required |
 
 - [x] (Account) Default Account Check
 - [x] (Account) Root Privilege Account Detection

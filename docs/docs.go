@@ -98,23 +98,26 @@ const docTemplate = `{
             "required": [
                 "category",
                 "host",
+                "os",
                 "password",
                 "script",
                 "username"
             ],
             "properties": {
                 "category": {
-                    "type": "string",
-                    "enum": [
-                        "account",
-                        "file_system",
-                        "network_and_app",
-                        "hypervisor_policy",
-                        "patch_and_log"
-                    ]
+                    "description": "카테고리 검증 제거",
+                    "type": "string"
                 },
                 "host": {
                     "type": "string"
+                },
+                "os": {
+                    "description": "OS 타입 추가",
+                    "type": "string",
+                    "enum": [
+                        "ubuntu",
+                        "xenserver"
+                    ]
                 },
                 "password": {
                     "type": "string"

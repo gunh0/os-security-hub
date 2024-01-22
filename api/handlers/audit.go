@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"path/filepath"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -15,7 +16,8 @@ type AuditRequest struct {
 	Host     string `json:"host" binding:"required"`
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required"`
-	Category string `json:"category" binding:"required,oneof=account file_system network_and_app logging"`
+	OS       string `json:"os" binding:"required,oneof=ubuntu xenserver"` // OS 타입 추가
+	Category string `json:"category" binding:"required"`                  // 카테고리 검증 제거
 	Script   string `json:"script" binding:"required"`
 }
 
@@ -26,9 +28,38 @@ type AuditResult struct {
 	Timestamp time.Time `json:"timestamp"`
 }
 
-// ErrorResponse represents an error response from the API
 type ErrorResponse struct {
 	Error string `json:"error" example:"error message"`
+}
+
+// getScriptPath returns the appropriate script path based on OS and category
+func getScriptPath(os, category, script string) string {
+	switch os {
+	case "ubuntu":
+		return filepath.Join("audit", "ubuntu", category, script+".sh")
+	case "xenserver":
+		return filepath.Join("audit", "xenserver", category, script+".sh")
+	default:
+		return ""
+	}
+}
+
+// validateCategory checks if the category is valid for the given OS
+func validateCategory(os, category string) error {
+	validCategories := map[string][]string{
+		"ubuntu":    {"initial_setup"},
+		"xenserver": {"account", "file_system", "network_and_app", "logging"},
+	}
+
+	if categories, ok := validCategories[os]; ok {
+		for _, validCategory := range categories {
+			if category == validCategory {
+				return nil
+			}
+		}
+		return fmt.Errorf("invalid category '%s' for OS '%s'", category, os)
+	}
+	return fmt.Errorf("unsupported OS: %s", os)
 }
 
 // RunAudit godoc
@@ -50,6 +81,23 @@ func RunAudit(c *gin.Context) {
 		return
 	}
 
+	// Validate category for the specified OS
+	if err := validateCategory(req.OS, req.Category); err != nil {
+		c.JSON(http.StatusBadRequest, ErrorResponse{
+			Error: err.Error(),
+		})
+		return
+	}
+
+	// Get script path based on OS and category
+	scriptPath := getScriptPath(req.OS, req.Category, req.Script)
+	if scriptPath == "" {
+		c.JSON(http.StatusBadRequest, ErrorResponse{
+			Error: "Invalid OS specified",
+		})
+		return
+	}
+
 	client, err := ssh.NewClient(req.Host, req.Username, req.Password)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, ErrorResponse{
@@ -59,7 +107,6 @@ func RunAudit(c *gin.Context) {
 	}
 	defer client.Close()
 
-	scriptPath := fmt.Sprintf("audit/xenserver/%s/%s.sh", req.Category, req.Script)
 	output, err := client.ExecuteScript(scriptPath)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, ErrorResponse{
