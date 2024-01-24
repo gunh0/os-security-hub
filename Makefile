@@ -105,3 +105,10 @@ test-audit-xen-logging-02:
 test-audit-xen-logging-03:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=audit_log_file_permission_check
 
+test-audit-xen-logging-04:
+	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=btmp_permission_check
+
+test-audit-xen-logging-05:
+	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=xenstore_access_log_permission_check
+
+
