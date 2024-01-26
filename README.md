@@ -6,7 +6,12 @@
 |---|---|---|---|---|
 | 22.04 LTS (Jammy Jellyfish) | Apr 2022 | Apr 2027 | Apr 2032 | Apr 2034 |
 
+**240328_CIS_Ubuntu Linux 22.04 LTS Benchmark v2.0.0**
+
+- **Initail Setup**
 - [x] (Initial Setup) 1.1.1.1 Ensure cramfs kernel module is not available (Automated)
+
+<br/>
 
 ### XenServer
 
@@ -16,6 +21,7 @@
 |---|:---:|:---:|:---:|:---:|:---:|---|
 | XenServer | 8 | EN | 03-26-2024 | 06-03-2024 | 11-30-2028 | XenServer specific licence required |
 
+- **Account**
 - [x] (Account) Default Account Check
 - [x] (Account) Root Privilege Account Detection
 - [x] (Account) Password File Permission Check
@@ -23,12 +29,16 @@
 - [x] (Account) Password Policy Check
 - [x] (Account) System Account Shell Restriction Check
 - [x] (Account) SU Command Restriction Check
+- **File System**
 - [x] (File System) UMASK Default Configuration Check
 - [x] (File System) XSConsole File Permission Check
 - [x] (File System) Profile File Permission Check
 - [x] (File System) Hosts File Permission Check
 - [x] (File System) Issue File Permission Check
+- **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
+- [ ] (Network and Major App) `echo` (7) Service Status Check
+- **Logging**
 - [x] (Logging) Authpriv Log Configuration Check
 - [x] (Logging) UDP Syslog Transfer Port (514) Security Check
 - [x] (Logging) Audit Log File Permission Check

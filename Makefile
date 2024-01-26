@@ -96,6 +96,9 @@ test-audit-xen-file-04:
 test-audit-xen-network-01:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=session_timeout_configuration_check
 
+test-audit-xen-network-02:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=echo_service_status_check
+
 test-audit-xen-logging-01:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=authpriv_log_configuration_check 
 
