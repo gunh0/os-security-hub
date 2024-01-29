@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TITLE="Chargen Service Status Check"
+TITLE="Chargen (19) Service Status Check"
 RESULT="PASS"
 DETAILS=""
 
