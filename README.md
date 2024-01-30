@@ -38,6 +38,7 @@
 - **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Network and Major App) `echo` (7) Service Status Check
+- [ ] (Network and Major App) `discard` (9) Service Status Check
 - [x] (Network and Major App) `chargen` (19) Service Status Check
 - [ ] (Network and Major App) `finger` (79) Service Status Check
 - **Logging**

@@ -100,6 +100,9 @@ test-audit-xen-network-02:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=echo_service_status_check
 
 test-audit-xen-network-03:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=discard_service_status_check
+
+test-audit-xen-network-05:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=chargen_service_status_check
 
 test-audit-xen-logging-01:
