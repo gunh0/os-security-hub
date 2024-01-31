@@ -59,7 +59,7 @@ test-audit-xen:
 		-H 'Content-Type: application/json' \
 		-d '{"os":"$(OS)","host":"$(XEN_HOST)","username":"$(XEN_USERNAME)","password":"$(XEN_PASSWORD)","category":"$(CATEGORY)","script":"$(SCRIPT)"}' | json_pp
 
-# XenServer Usage)
+# XenServer Usage (Account))
 test-audit-xen-account-01:
 	@make test-audit-xen OS=xenserver CATEGORY=account SCRIPT=default_account_check 
 
@@ -81,6 +81,7 @@ test-audit-xen-account-06:
 test-audit-xen-account-07:
 	@make test-audit-xen OS=xenserver CATEGORY=account SCRIPT=su_command_restriction_check
 
+# XenServer Usage (File System))
 test-audit-xen-file-01:
 	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=umask_default_configuration_check
 
@@ -93,6 +94,7 @@ test-audit-xen-file-03:
 test-audit-xen-file-04:
 	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=hosts_file_permission_check
 
+# XenServer Usage (Network and Major App))
 test-audit-xen-network-01:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=session_timeout_configuration_check
 
@@ -102,9 +104,13 @@ test-audit-xen-network-02:
 test-audit-xen-network-03:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=discard_service_status_check
 
+test-audit-xen-network-04:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=daytime_service_status_check
+
 test-audit-xen-network-05:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=chargen_service_status_check
 
+# XenServer Usage (Logging))
 test-audit-xen-logging-01:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=authpriv_log_configuration_check 
 
@@ -119,5 +125,3 @@ test-audit-xen-logging-04:
 
 test-audit-xen-logging-05:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=xenstore_access_log_permission_check
-
-
