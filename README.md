@@ -35,6 +35,7 @@
 - [x] (File System) Profile File Permission Check
 - [x] (File System) Hosts File Permission Check
 - [x] (File System) Issue File Permission Check
+- [ ] (File System) Dump Command SUID/SGID Permission Check
 - **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Network and Major App) `echo` (7) Service Status Check

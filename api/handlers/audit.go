@@ -16,8 +16,8 @@ type AuditRequest struct {
 	Host     string `json:"host" binding:"required"`
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required"`
-	OS       string `json:"os" binding:"required,oneof=ubuntu xenserver"` // OS 타입 추가
-	Category string `json:"category" binding:"required"`                  // 카테고리 검증 제거
+	OS       string `json:"os" binding:"required,oneof=ubuntu xenserver"` // OS Type
+	Category string `json:"category" binding:"required"`                  // Category of audit
 	Script   string `json:"script" binding:"required"`
 }
 
