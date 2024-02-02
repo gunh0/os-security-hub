@@ -35,7 +35,7 @@
 - [x] (File System) Profile File Permission Check
 - [x] (File System) Hosts File Permission Check
 - [x] (File System) Issue File Permission Check
-- [ ] (File System) Dump Command SUID/SGID Permission Check
+- [x] (File System) Dump Command SUID/SGID Permission Check
 - **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Network and Major App) `echo` (7) Service Status Check
@@ -49,3 +49,4 @@
 - [x] (Logging) Audit Log File Permission Check
 - [x] (Logging) Failed Login Attempts Log (btmp) Permission Check
 - [x] (Logging) XenStore Access Log Permission Check
+- [x] (Logging) Secure Log File Permission Check

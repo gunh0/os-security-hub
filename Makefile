@@ -125,3 +125,6 @@ test-audit-xen-logging-04:
 
 test-audit-xen-logging-05:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=xenstore_access_log_permission_check
+
+test-audit-xen-logging-06:
+	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=secure_log_file_permission_check
