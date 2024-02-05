@@ -42,6 +42,7 @@
 - [x] (Network and Major App) `discard` (9) Service Status Check
 - [x] (Network and Major App) `daytime` (13) Service Status Check
 - [x] (Network and Major App) `chargen` (19) Service Status Check
+- [x] (Network and Major App) `time` (37) Service Status Check
 - [x] (Network and Major App) `finger` (79) Service Status Check
 - **Logging**
 - [x] (Logging) Authpriv Log Configuration Check
