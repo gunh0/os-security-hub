@@ -113,6 +113,15 @@ test-audit-xen-network-05:
 test-audit-xen-network-06:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=time_service_status_check
 
+test-audit-xen-network-07:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=tftp_service_status_check
+
+test-audit-xen-network-08:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=finger_service_status_check
+
+test-audit-xen-network-09:
+	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=sftp_service_status_check
+
 # XenServer Usage (Logging))
 test-audit-xen-logging-01:
 	@make test-audit-xen OS=xenserver CATEGORY=logging SCRIPT=authpriv_log_configuration_check 
