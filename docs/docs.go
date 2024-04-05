@@ -105,14 +105,14 @@ const docTemplate = `{
             ],
             "properties": {
                 "category": {
-                    "description": "카테고리 검증 제거",
+                    "description": "Category of audit",
                     "type": "string"
                 },
                 "host": {
                     "type": "string"
                 },
                 "os": {
-                    "description": "OS 타입 추가",
+                    "description": "OS Type",
                     "type": "string",
                     "enum": [
                         "ubuntu",

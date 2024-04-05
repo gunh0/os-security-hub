@@ -36,6 +36,7 @@
 - [x] (File System) Hosts File Permission Check
 - [x] (File System) Issue File Permission Check
 - [x] (File System) Dump Command SUID/SGID Permission Check
+- [x] (File System) Home Directory and Configuration Files Permission Check
 - **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Network and Major App) `echo` (7) Service Status Check
