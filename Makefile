@@ -97,6 +97,9 @@ test-audit-xen-file-04:
 test-audit-xen-file-20:
 	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=home_directory_and_configuration_files_permission_check
 
+test-audit-xen-file-21:
+	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=crontab_file_permission_check
+
 # XenServer Usage (Network and Major App))
 test-audit-xen-network-01:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=session_timeout_configuration_check
