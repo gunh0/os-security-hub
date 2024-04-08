@@ -39,6 +39,7 @@
 - [x] (File System) Home Directory and Configuration Files Permission Check
 - [x] (File System) Crontab File Permission Check
 - [x] (File System) Root PATH Environment Variable Check
+- [x] (File System) Service File Permission Check
 - **Network and Major App**
 - [x] (Network and Major App) Session Timeout Configuration Check
 - [x] (Network and Major App) `echo` (7) Service Status Check

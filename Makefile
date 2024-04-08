@@ -103,6 +103,9 @@ test-audit-xen-file-21:
 test-audit-xen-file-35:
 	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=root_path_environment_variable_check
 
+test-audit-xen-file-36:
+	@make test-audit-xen OS=xenserver CATEGORY=file_system SCRIPT=service_file_permission_check
+
 # XenServer Usage (Network and Major App))
 test-audit-xen-network-01:
 	@make test-audit-xen OS=xenserver CATEGORY=network_and_app SCRIPT=session_timeout_configuration_check
