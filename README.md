@@ -50,6 +50,7 @@
 - [x] (Network and Major App) `tftp` (69) Service Status Check
 - [x] (Network and Major App) `finger` (79) Service Status Check
 - [x] (Network and Major App) `sftp` (115) Service Status Check
+- [x] (Network and Major App) PAM and SSH Configuration Check for Root Remote Access Control
 - **Logging**
 - [x] (Logging) Authpriv Log Configuration Check
 - [x] (Logging) UDP Syslog Transfer Port (514) Security Check
