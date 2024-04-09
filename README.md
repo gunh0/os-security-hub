@@ -1,3 +1,7 @@
+# OS Security Hub
+
+> A comprehensive security auditing and hardening toolkit for multiple operating systems. Features automated compliance checks and security assessment tools based on industry standards and official security guidelines.
+
 ### Ubuntu
 
 > Tested on 22.04 LTS (Jammy Jellyfish)
